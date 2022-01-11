@@ -10,8 +10,6 @@ Welcome to flybirds's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   hello
-   hellomd
    BDD-UI-Testing-Flybirds
 
 

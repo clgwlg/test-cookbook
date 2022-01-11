@@ -116,7 +116,7 @@
 <li><p>基于Airtest，实现BDD中“测试用例能在自动化测试平台上执行”需要用到UI自动化测试框架。</p></li>
 <li><p>基于Multiple-cucumber-html-reporter，实现可视化的测试报告</p></li>
 </ul>
-<p><img alt="architecture" src="images/architecture.png" /></p>
+<p><img alt="architecture" src="_images/architecture.png" /></p>
 </section>
 <section id="id3">
 <h2>特性<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
@@ -159,7 +159,7 @@ chmod +x adb
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>flybirds create 
 </pre></div>
 </div>
-<p><img alt="clicreate" src="images/clicreate.png" /></p>
+<p><img alt="clicreate" src="_images/clicreate.png" /></p>
 </section>
 <section id="id5">
 <h2>快速上手<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
@@ -245,9 +245,9 @@ chmod +x adb
 <p><strong>场景(Senario)</strong> 标题应该是被测试场景的合理描述性标题，由一系列给定条件的步骤组成</p>
 <p><strong>场景大纲(Senario Outline)</strong> 包含功能的详细描述，可以有一组预期条件和结果来配合您的场景步骤</p>
 <p>以下是中文feature例子
-<img alt="featureCN" src="images/feature_zhCN.png" /></p>
+<img alt="featureCN" src="_images/feature_zhCN.png" /></p>
 <p>以下是英文feature例子
-<img alt="feature_en" src="images/feature_en.png" /></p>
+<img alt="feature_en" src="_images/feature_en.png" /></p>
 </section>
 <section id="step">
 <h3>step语句模板<a class="headerlink" href="#step" title="永久链接至标题">¶</a></h3>
@@ -342,7 +342,7 @@ chmod +x adb
 <div><p>可以使用tag标记不同的场景，方便有选择性的运行。</p>
 </div></blockquote>
 <p>下面是一个例子
-<img alt="tag" src="images/tag.png" /></p>
+<img alt="tag" src="_images/tag.png" /></p>
 <p>运行有特定tag的场景，多个用逗号隔开</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">flybirds</span> <span class="n">run</span> <span class="o">-</span><span class="n">T</span> <span class="n">tag1</span><span class="p">,</span><span class="n">tag2</span>
 </pre></div>
@@ -426,13 +426,13 @@ flybirds run --format<span class="o">=</span>json
 <p><strong>提供了丰富的配置项 ｜ <a class="reference external" href="https://github.com/ctripcorp/flybirds/blob/main/docs/demoproject_zhCN.md">帮助文档</a></strong></p>
 <p>必须配置项：deviceId packageName。</p>
 <p>连接IOS设备时，需要额外配置webDriverAgent、platform。</p>
-<p><img alt="configimg" src="images/confignew.png" /></p>
+<p><img alt="configimg" src="_images/confignew.png" /></p>
 </section>
 <section id="report">
 <h2>报告(report)<a class="headerlink" href="#report" title="永久链接至标题">¶</a></h2>
 <blockquote>
 <div><p>报告包含汇总Summary和功能(feature)、场景(senario)的执行结果，对于失败的场景(senario)，报告中会展示当时的屏幕图像和视频, 下面是一个例子。
-<img alt="report" src="images/report.png" /></p>
+<img alt="report" src="_images/report.png" /></p>
 </div></blockquote>
 </section>
 <section id="id11">
@@ -446,7 +446,7 @@ flybirds run --format<span class="o">=</span>json
 <li><p>在feature/steps/steps.py中import该.py文件</p></li>
 </ol>
 <p>示例代码如下
-<img alt="dsl_extend" src="images/dsl_extend.png" /></p>
+<img alt="dsl_extend" src="_images/dsl_extend.png" /></p>
 <p>对于团队内部通用的自定义功能，可以考虑创建一个extend package，flybirds支持动态加载，package命名包含“-flybirds-plugin”即可。</p>
 </section>
 <section id="id12">
@@ -487,7 +487,7 @@ flybirds run --format<span class="o">=</span>json
 </pre></div>
 </div>
 <p>示例代码如下
-<img alt="lang" src="images/lang_extend.png" /></p>
+<img alt="lang" src="_images/lang_extend.png" /></p>
 </section>
 <section id="id14">
 <h2>持续集成<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h2>
