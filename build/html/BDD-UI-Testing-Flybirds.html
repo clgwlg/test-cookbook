@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>&lt;no title&gt; &mdash; flybirds v0.1.3 文档</title>
+  <title>携程机票BDD-UI-Testing框架Flybirds &mdash; flybirds v0.1.3 文档</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -19,7 +19,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="搜索" href="search.html" />
-    <link rel="prev" title="hello,world" href="hello.html" /> 
+    <link rel="prev" title="hello world" href="hellomd.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -38,8 +38,36 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="hello.html">hello,world</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hellomd.html">hello world</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">携程机票BDD-UI-Testing框架Flybirds</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">背景</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">为什么开源</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#flybirds">Flybirds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">特性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">环境搭建</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">快速上手</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id6">运行演示</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">项目结构</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#features">features目录</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#feature">feature文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step">step语句模板</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hooks">Hooks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tags">标签(Tags)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id8">运行前检查</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id9">运行参数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id10">配置参数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#report">报告(report)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id11">自定义step语句模板</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id12">自定义框架扩展</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id13">其他语种支持</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id14">持续集成</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id15">发版计划</a></li>
+</ul>
+</li>
 </ul>
 
         </div>
@@ -56,7 +84,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>&lt;no title&gt;</li>
+      <li>携程机票BDD-UI-Testing框架Flybirds</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/BDD-UI-Testing-Flybirds.md.txt" rel="nofollow"> View page source</a>
       </li>
@@ -66,25 +94,33 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <p># 携程机票BDD-UI-Testing框架Flybirds</p>
-<p>## 背景
-携程机票从2018年年中正式引入BDD，至今已3年多，成为内部首选的敏捷开发技术。</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="bdd-ui-testingflybirds">
+<h1>携程机票BDD-UI-Testing框架Flybirds<a class="headerlink" href="#bdd-ui-testingflybirds" title="永久链接至标题">¶</a></h1>
+<section id="id1">
+<h2>背景<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<p>携程机票从2018年年中正式引入BDD，至今已3年多，成为内部首选的敏捷开发技术。</p>
 <p><strong>Flybirds</strong> 是一套基于BDD模式的前端UI自动化测试框架，提供了一系列开箱即用的工具和完善的文档，现在逐步稳定，成为机票内部首选的BDD-UI-Testing测试框架。</p>
-<p>## 为什么开源</p>
+</section>
+<section id="id2">
+<h2>为什么开源<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <ul class="simple">
 <li><p>分享我们的BDD技术方案</p></li>
 <li><p>期待业内使用BDD技术的同行通过开源社区与我们进行更深入的交流</p></li>
 </ul>
 <p>本文将从特性介绍、环境搭建、使用帮助、自定义扩展、持续集成、发版计划这几个方面对框架进行介绍。</p>
-<p>## Flybirds</p>
+</section>
+<section id="flybirds">
+<h2>Flybirds<a class="headerlink" href="#flybirds" title="永久链接至标题">¶</a></h2>
 <ul class="simple">
 <li><p>基于Behave，实现BDD中“自然语言测试用例文档”和“自动化测试代码”关联需要用到支持BDD工具。</p></li>
 <li><p>基于Airtest，实现BDD中“测试用例能在自动化测试平台上执行”需要用到UI自动化测试框架。</p></li>
 <li><p>基于Multiple-cucumber-html-reporter，实现可视化的测试报告</p></li>
 </ul>
-<p>![architecture](images/architecture.png)</p>
-<p>## 特性</p>
-<p>使用**Flybirds**你能够完成大部分的手机端自动化操作，以下是一些帮助入门的特性描述：</p>
+<p><img alt="architecture" src="images/architecture.png" /></p>
+</section>
+<section id="id3">
+<h2>特性<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>使用<strong>Flybirds</strong>你能够完成大部分的手机端自动化操作，以下是一些帮助入门的特性描述：</p>
 <ul class="simple">
 <li><p>基于BDD模式，类自然语言语法</p></li>
 <li><p>支持自动化APP操作、表单提交、UI元素校验、键盘输入、Deeplink跳转等</p></li>
@@ -93,91 +129,115 @@
 <li><p>提供cli脚手架，快速搭建项目</p></li>
 <li><p>提供html报告</p></li>
 </ul>
-<p>## 环境搭建</p>
+</section>
+<section id="id4">
+<h2>环境搭建<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
 <ol class="arabic simple">
-<li><p><strong>使用`pip`安装flybirds框架，过程中会自动安装所需的 [依赖包](https://github.com/ctripcorp/flybirds/blob/main/docs/relate_zhCN.md)</strong></p></li>
+<li><p><strong>使用<code class="docutils literal notranslate"><span class="pre">pip</span></code>安装flybirds框架，过程中会自动安装所需的 <a class="reference external" href="https://github.com/ctripcorp/flybirds/blob/main/docs/relate_zhCN.md">依赖包</a></strong></p></li>
 </ol>
-<p><code class="docutils literal notranslate"><span class="pre">`bash</span>
-<span class="pre">pip3</span> <span class="pre">install</span> <span class="pre">flybirds</span>
-<span class="pre">`</span></code>
-在Mac/Linux系统下，需要手动赋予adb可执行权限</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip3 install flybirds
+</pre></div>
+</div>
+<p>在Mac/Linux系统下，需要手动赋予adb可执行权限</p>
 <ul class="simple">
 <li><p>for mac</p></li>
 </ul>
-<p><code class="docutils literal notranslate"><span class="pre">`bash</span>
-<span class="pre">cd</span> <span class="pre">{your_python_path}/site-packages/airtest/core/android/static/adb/mac</span>
-<span class="pre">chmod</span> <span class="pre">+x</span> <span class="pre">adb</span>
-<span class="pre">`</span></code>
-- for linux
-<code class="docutils literal notranslate"><span class="pre">`bash</span>
-<span class="pre">cd</span> <span class="pre">{your_python_path}/site-packages/airtest/core/android/static/adb/linux</span>
-<span class="pre">chmod</span> <span class="pre">+x</span> <span class="pre">adb</span>
-<span class="pre">`</span></code>
-2. <strong>使用脚手架创建项目</strong></p>
-<p><code class="docutils literal notranslate"><span class="pre">`bash</span>
-<span class="pre">flybirds</span> <span class="pre">create</span>
-<span class="pre">`</span></code>
-![clicreate](images/clicreate.png)</p>
-<p>## 快速上手</p>
-<p>### 运行演示</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> <span class="o">{</span>your_python_path<span class="o">}</span>/site-packages/airtest/core/android/static/adb/mac
+chmod +x adb
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>for linux</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> <span class="o">{</span>your_python_path<span class="o">}</span>/site-packages/airtest/core/android/static/adb/linux
+chmod +x adb
+</pre></div>
+</div>
+<ol class="arabic simple">
+<li><p><strong>使用脚手架创建项目</strong></p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>flybirds create 
+</pre></div>
+</div>
+<p><img alt="clicreate" src="images/clicreate.png" /></p>
+</section>
+<section id="id5">
+<h2>快速上手<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<section id="id6">
+<h3>运行演示<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
 <p>为了帮助使用，项目创建时，会生成中英文的Android、iOS演示feature，方便用户参考。</p>
-<p><code class="docutils literal notranslate"><span class="pre">`</span>
-<span class="pre">features/test/</span>
-<span class="pre">features/test/android</span>
-<span class="pre">features/test/android/cn/everything.feature</span>
-<span class="pre">features/test/android/en/everything.feature</span>
-<span class="pre">features/test/ios</span>
-<span class="pre">features/test/ios/cn/everything.feature</span>
-<span class="pre">features/test/ios/en/everything.feature</span>
-<span class="pre">`</span></code></p>
-<p>以“Android”为例
-1. 执行命令 <cite>adb devices</cite> , 检查设备列表中是否包含测试设备
-2. 开始运行
-<code class="docutils literal notranslate"><span class="pre">`</span>
-<span class="pre">cd</span> <span class="pre">{PATH_TO_PROJECT_FOLDER}</span>
-<span class="pre">flybirds</span> <span class="pre">run</span> <span class="pre">-P</span> <span class="pre">features/test/android</span>
-<span class="pre">`</span></code>
-框架会通过`flybirds_config`中配置的`packagePath`自动下载测试包并安装（请确保手机已经打开”允许安装未知来源“ ）
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">features</span><span class="o">/</span><span class="n">test</span><span class="o">/</span>
+<span class="n">features</span><span class="o">/</span><span class="n">test</span><span class="o">/</span><span class="n">android</span>
+<span class="n">features</span><span class="o">/</span><span class="n">test</span><span class="o">/</span><span class="n">android</span><span class="o">/</span><span class="n">cn</span><span class="o">/</span><span class="n">everything</span><span class="o">.</span><span class="n">feature</span>
+<span class="n">features</span><span class="o">/</span><span class="n">test</span><span class="o">/</span><span class="n">android</span><span class="o">/</span><span class="n">en</span><span class="o">/</span><span class="n">everything</span><span class="o">.</span><span class="n">feature</span>
+<span class="n">features</span><span class="o">/</span><span class="n">test</span><span class="o">/</span><span class="n">ios</span>
+<span class="n">features</span><span class="o">/</span><span class="n">test</span><span class="o">/</span><span class="n">ios</span><span class="o">/</span><span class="n">cn</span><span class="o">/</span><span class="n">everything</span><span class="o">.</span><span class="n">feature</span>
+<span class="n">features</span><span class="o">/</span><span class="n">test</span><span class="o">/</span><span class="n">ios</span><span class="o">/</span><span class="n">en</span><span class="o">/</span><span class="n">everything</span><span class="o">.</span><span class="n">feature</span>
+</pre></div>
+</div>
+<p>以“Android”为例</p>
+<ol class="arabic simple">
+<li><p>执行命令 <code class="docutils literal notranslate"><span class="pre">adb</span> <span class="pre">devices</span></code> , 检查设备列表中是否包含测试设备</p></li>
+<li><p>开始运行</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="p">{</span><span class="n">PATH_TO_PROJECT_FOLDER</span><span class="p">}</span>
+<span class="n">flybirds</span> <span class="n">run</span> <span class="o">-</span><span class="n">P</span> <span class="n">features</span><span class="o">/</span><span class="n">test</span><span class="o">/</span><span class="n">android</span>
+</pre></div>
+</div>
+<p>框架会通过<code class="docutils literal notranslate"><span class="pre">flybirds_config</span></code>中配置的<code class="docutils literal notranslate"><span class="pre">packagePath</span></code>自动下载测试包并安装（请确保手机已经打开”允许安装未知来源“ ）<br />
 运行结果如下</p>
-<p><a href="#id1"><span class="problematic" id="id2">``</span></a>`
-11 features passed, 0 failed, 0 skipped, 0 untested
-23 scenarios passed, 0 failed, 0 skipped, 0 untested
-117 steps passed, 0 failed, 0 skipped, 0 undefined, 0 untested
-Took 5m21.300s
-=====================================================================================</p>
-<blockquote>
-<div><p>Multiple Cucumber HTML report generated in:</p>
-<p>/Users/test/my_first_project/report/7eb9162a-9d42-4fde-a5d7-d8d4bca7a8d8/index.html</p>
-</div></blockquote>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">11</span> <span class="n">features</span> <span class="n">passed</span><span class="p">,</span> <span class="mi">0</span> <span class="n">failed</span><span class="p">,</span> <span class="mi">0</span> <span class="n">skipped</span><span class="p">,</span> <span class="mi">0</span> <span class="n">untested</span>
+<span class="mi">23</span> <span class="n">scenarios</span> <span class="n">passed</span><span class="p">,</span> <span class="mi">0</span> <span class="n">failed</span><span class="p">,</span> <span class="mi">0</span> <span class="n">skipped</span><span class="p">,</span> <span class="mi">0</span> <span class="n">untested</span>
+<span class="mi">117</span> <span class="n">steps</span> <span class="n">passed</span><span class="p">,</span> <span class="mi">0</span> <span class="n">failed</span><span class="p">,</span> <span class="mi">0</span> <span class="n">skipped</span><span class="p">,</span> <span class="mi">0</span> <span class="n">undefined</span><span class="p">,</span> <span class="mi">0</span> <span class="n">untested</span>
+<span class="n">Took</span> <span class="mi">5</span><span class="n">m21</span><span class="mf">.300</span><span class="n">s</span>
+<span class="o">=====================================================================================</span>
+    <span class="n">Multiple</span> <span class="n">Cucumber</span> <span class="n">HTML</span> <span class="n">report</span> <span class="n">generated</span> <span class="ow">in</span><span class="p">:</span>
+
+    <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">test</span><span class="o">/</span><span class="n">my_first_project</span><span class="o">/</span><span class="n">report</span><span class="o">/</span><span class="mi">7</span><span class="n">eb9162a</span><span class="o">-</span><span class="mi">9</span><span class="n">d42</span><span class="o">-</span><span class="mi">4</span><span class="n">fde</span><span class="o">-</span><span class="n">a5d7</span><span class="o">-</span><span class="n">d8d4bca7a8d8</span><span class="o">/</span><span class="n">index</span><span class="o">.</span><span class="n">html</span>
+<span class="o">=====================================================================================</span>
+</pre></div>
+</div>
 <p>接下来，了解下更多项目细节</p>
-<p>### 项目结构
-- config：配置文件
-- features：测试用例feature文件
-- pscript：自定义扩展
-- report：测试报告</p>
-<p>### features目录
-基础目录结构如下
-* test：存放feature文件，这些文件使用自然语言编写，最好由软件项目中的非技术业务、产品人员参与者编写。
-* steps：存放场景中使用的step语句实现，“steps.py”中加载了所有的step语句模版
-<code class="docutils literal notranslate"><span class="pre">`</span>
-<span class="pre">features/</span>
-<span class="pre">features/test/</span>
-<span class="pre">features/test/everything.feature</span>
-<span class="pre">features/steps/</span>
-<span class="pre">features/steps/steps.py</span>
-<span class="pre">`</span></code>
-复杂些的目录结构参考如下
-<code class="docutils literal notranslate"><span class="pre">`</span>
-<span class="pre">features/</span>
-<span class="pre">features/test/</span>
-<span class="pre">features/test/list.feature</span>
-<span class="pre">features/test/buy.feature</span>
-<span class="pre">features/test/detail.feature</span>
-<span class="pre">features/steps/</span>
-<span class="pre">features/steps/steps.py</span>
-<span class="pre">`</span></code></p>
-<p>### feature文件
-&gt; feature文件包含用户动作，行为特征描述及预期结果的文本，行为特征部分使用Gherkin语言编写。</p>
+</section>
+<section id="id7">
+<h3>项目结构<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li><p>config：配置文件</p></li>
+<li><p>features：测试用例feature文件</p></li>
+<li><p>pscript：自定义扩展</p></li>
+<li><p>report：测试报告</p></li>
+</ul>
+</section>
+<section id="features">
+<h3>features目录<a class="headerlink" href="#features" title="永久链接至标题">¶</a></h3>
+<p>基础目录结构如下</p>
+<ul class="simple">
+<li><p>test：存放feature文件，这些文件使用自然语言编写，最好由软件项目中的非技术业务、产品人员参与者编写。</p></li>
+<li><p>steps：存放场景中使用的step语句实现，“steps.py”中加载了所有的step语句模版</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">features</span><span class="o">/</span>
+<span class="n">features</span><span class="o">/</span><span class="n">test</span><span class="o">/</span>
+<span class="n">features</span><span class="o">/</span><span class="n">test</span><span class="o">/</span><span class="n">everything</span><span class="o">.</span><span class="n">feature</span>
+<span class="n">features</span><span class="o">/</span><span class="n">steps</span><span class="o">/</span>
+<span class="n">features</span><span class="o">/</span><span class="n">steps</span><span class="o">/</span><span class="n">steps</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>复杂些的目录结构参考如下</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">features</span><span class="o">/</span>
+<span class="n">features</span><span class="o">/</span><span class="n">test</span><span class="o">/</span>
+<span class="n">features</span><span class="o">/</span><span class="n">test</span><span class="o">/</span><span class="nb">list</span><span class="o">.</span><span class="n">feature</span>
+<span class="n">features</span><span class="o">/</span><span class="n">test</span><span class="o">/</span><span class="n">buy</span><span class="o">.</span><span class="n">feature</span>
+<span class="n">features</span><span class="o">/</span><span class="n">test</span><span class="o">/</span><span class="n">detail</span><span class="o">.</span><span class="n">feature</span>
+<span class="n">features</span><span class="o">/</span><span class="n">steps</span><span class="o">/</span>
+<span class="n">features</span><span class="o">/</span><span class="n">steps</span><span class="o">/</span><span class="n">steps</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+</section>
+<section id="feature">
+<h3>feature文件<a class="headerlink" href="#feature" title="永久链接至标题">¶</a></h3>
+<blockquote>
+<div><p>feature文件包含用户动作，行为特征描述及预期结果的文本，行为特征部分使用Gherkin语言编写。</p>
+</div></blockquote>
 <p>feature文件，也称为功能文件，有两个目的：文档和自动化测试。</p>
 <p>以关键字开头（“功能”、“场景”、“场景大纲”、“当”、“而且”、“那么”……）, 文件中的任何位置都允许使用注释行。</p>
 <p><strong>功能(Feature)</strong> 是被测试功能的一些合理的描述性标题，由场景组成。他们可以选择有一个描述、一个背景和一组标签。</p>
@@ -185,45 +245,83 @@ Took 5m21.300s
 <p><strong>场景(Senario)</strong> 标题应该是被测试场景的合理描述性标题，由一系列给定条件的步骤组成</p>
 <p><strong>场景大纲(Senario Outline)</strong> 包含功能的详细描述，可以有一组预期条件和结果来配合您的场景步骤</p>
 <p>以下是中文feature例子
-![featureCN](images/feature_zhCN.png)</p>
+<img alt="featureCN" src="images/feature_zhCN.png" /></p>
 <p>以下是英文feature例子
-![feature_en](images/feature_en.png)</p>
-<p>### step语句模板
-&gt; 以下列出了部分模版 | [更多模版查阅](<a class="reference external" href="https://github.com/ctripcorp/flybirds/blob/main/docs/casedsl_zhCN.md">https://github.com/ctripcorp/flybirds/blob/main/docs/casedsl_zhCN.md</a>)</p>
-<div class="line-block">
-<div class="line-block">
-<div class="line">语句模板   | 语义  |</div>
-<div class="line">:—-      | :—-  |</div>
-</div>
-<div class="line"><strong>跳转到 []</strong>     | 跳转到指定的url地址 |</div>
-<div class="line"><strong>等待 [] 秒</strong>     | 等待一段时间 |</div>
-<div class="line"><strong>页面渲染完成出现元素 []</strong>    | 进入新的页面时检查指定元素是否渲染完成 |</div>
-<div class="line"><strong>点击 []</strong>     | 点击指定属性的元素 |</div>
-<div class="line"><strong>在 [] 中输入 []</strong>     | 在指定选择器中输入字符串 |</div>
-<div class="line"><strong>向 [] 查找 [] 的元素</strong>    | 向指定方向查找指定属性的元素 |</div>
-<div class="line"><strong>全屏向 [] 滑动 []</strong>    | 全屏向指定方向滑动指定距离 |</div>
-<div class="line"><strong>存在 [] 的文案</strong>      | 检查页面中存在指定的字符串|</div>
-<div class="line"><strong>存在 [] 的元素</strong>     | 检查页面中存在指定属性的元素 |</div>
-<div class="line"><strong>元素 [] 消失</strong>     | 检查页面中指定属性的元素在指定时间内消失 |</div>
-<div class="line"><strong>全屏截图</strong>     | 保存当前屏幕图像 |</div>
-<div class="line"><strong>开始录屏</strong>      | 开始录制视频 |</div>
-<div class="line"><strong>结束录屏</strong>      | 结束录制视频 |</div>
-<div class="line"><strong>安装APP []</strong>      | 安装APP |</div>
-<div class="line"><strong>启动APP []</strong>      | 启动APP |</div>
-<div class="line-block">
-<div class="line">—–  | —– |</div>
-</div>
-</div>
-<p>### Hooks
-用户可在以下文件中定义hooks
-<code class="docutils literal notranslate"><span class="pre">`</span>
-<span class="pre">pscript/dsl/step/hook.py</span>
-<span class="pre">`</span></code>
-* <strong>before_step(context, step), after_step(context, step)</strong></p>
+<img alt="feature_en" src="images/feature_en.png" /></p>
+</section>
+<section id="step">
+<h3>step语句模板<a class="headerlink" href="#step" title="永久链接至标题">¶</a></h3>
 <blockquote>
-<div><p>在每个步骤(step)之前和之后运行</p>
+<div><p>以下列出了部分模版 | <a class="reference external" href="https://github.com/ctripcorp/flybirds/blob/main/docs/casedsl_zhCN.md">更多模版查阅</a></p>
 </div></blockquote>
+<table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="text-left head"><p>语句模板</p></th>
+<th class="text-left head"><p>语义</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><strong>跳转到 []</strong></p></td>
+<td class="text-left"><p>跳转到指定的url地址</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>等待 [] 秒</strong></p></td>
+<td class="text-left"><p>等待一段时间</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>页面渲染完成出现元素 []</strong></p></td>
+<td class="text-left"><p>进入新的页面时检查指定元素是否渲染完成</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>点击 []</strong></p></td>
+<td class="text-left"><p>点击指定属性的元素</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>在 [] 中输入 []</strong></p></td>
+<td class="text-left"><p>在指定选择器中输入字符串</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>向 [] 查找 [] 的元素</strong></p></td>
+<td class="text-left"><p>向指定方向查找指定属性的元素</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>全屏向 [] 滑动 []</strong></p></td>
+<td class="text-left"><p>全屏向指定方向滑动指定距离</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>存在 [] 的文案</strong></p></td>
+<td class="text-left"><p>检查页面中存在指定的字符串</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>存在 [] 的元素</strong></p></td>
+<td class="text-left"><p>检查页面中存在指定属性的元素</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>元素 [] 消失</strong></p></td>
+<td class="text-left"><p>检查页面中指定属性的元素在指定时间内消失</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>全屏截图</strong></p></td>
+<td class="text-left"><p>保存当前屏幕图像</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>开始录屏</strong></p></td>
+<td class="text-left"><p>开始录制视频</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>结束录屏</strong></p></td>
+<td class="text-left"><p>结束录制视频</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>安装APP []</strong></p></td>
+<td class="text-left"><p>安装APP</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>启动APP []</strong></p></td>
+<td class="text-left"><p>启动APP</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>—–</p></td>
+<td class="text-left"><p>—–</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="hooks">
+<h3>Hooks<a class="headerlink" href="#hooks" title="永久链接至标题">¶</a></h3>
+<p>用户可在以下文件中定义hooks</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pscript</span><span class="o">/</span><span class="n">dsl</span><span class="o">/</span><span class="n">step</span><span class="o">/</span><span class="n">hook</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
 <ul>
+<li><p><strong>before_step(context, step), after_step(context, step)</strong></p>
+<p>在每个步骤(step)之前和之后运行</p>
+</li>
 <li><p><strong>before_scenario(context, scenario), after_scenario(context, scenario)</strong></p>
 <p>在每个场景(senario)之前和之后运行</p>
 </li>
@@ -237,173 +335,198 @@ Took 5m21.300s
 <p>在所有执行之前和之后运行</p>
 </li>
 </ul>
-<p>### 标签(Tags)
-&gt; 可以使用tag标记不同的场景，方便有选择性的运行。</p>
+</section>
+<section id="tags">
+<h3>标签(Tags)<a class="headerlink" href="#tags" title="永久链接至标题">¶</a></h3>
+<blockquote>
+<div><p>可以使用tag标记不同的场景，方便有选择性的运行。</p>
+</div></blockquote>
 <p>下面是一个例子
-![tag](images/tag.png)</p>
-<p>运行有特定tag的场景，多个用逗号隔开
-<code class="docutils literal notranslate"><span class="pre">`</span>
-<span class="pre">flybirds</span> <span class="pre">run</span> <span class="pre">-T</span> <span class="pre">tag1,tag2</span>
-<span class="pre">`</span></code></p>
-<p>‘-’开头表示运行不包含某tag的场景
-<code class="docutils literal notranslate"><span class="pre">`</span>
-<span class="pre">flybirds</span> <span class="pre">run</span> <span class="pre">-T</span> <span class="pre">-tag</span>
-<span class="pre">`</span></code></p>
-<p>## 运行前检查</p>
+<img alt="tag" src="images/tag.png" /></p>
+<p>运行有特定tag的场景，多个用逗号隔开</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">flybirds</span> <span class="n">run</span> <span class="o">-</span><span class="n">T</span> <span class="n">tag1</span><span class="p">,</span><span class="n">tag2</span>
+</pre></div>
+</div>
+<p>‘-’开头表示运行不包含某tag的场景</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">flybirds</span> <span class="n">run</span> <span class="o">-</span><span class="n">T</span> <span class="o">-</span><span class="n">tag</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="id8">
+<h2>运行前检查<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h2>
 <ol class="arabic">
-<li><dl>
-<dt>请确保配置的测试设备能够正常连接</dt><dd><ul class="simple">
-<li><p>Android: 执行命令 <cite>adb devices</cite> , 检查设备列表中是否包含测试设备</p></li>
-<li><p>iOS：以`tidevice`库举例，执行命令 <cite>tidevice list</cite>，检查设备列表中是否包含测试设备</p></li>
+<li><p>请确保配置的测试设备能够正常连接</p>
+<ul class="simple">
+<li><p>Android: 执行命令 <code class="docutils literal notranslate"><span class="pre">adb</span> <span class="pre">devices</span></code> , 检查设备列表中是否包含测试设备</p></li>
+<li><p>iOS：以<code class="docutils literal notranslate"><span class="pre">tidevice</span></code>库举例，执行命令 <code class="docutils literal notranslate"><span class="pre">tidevice</span> <span class="pre">list</span></code>，检查设备列表中是否包含测试设备</p></li>
 </ul>
-<p>[Android设备连接 Q&amp;A](<a class="reference external" href="https://airtest.doc.io.netease.com/IDEdocs/device_connection/2_android_faq/">https://airtest.doc.io.netease.com/IDEdocs/device_connection/2_android_faq/</a>)</p>
-</dd>
-</dl>
+<p><a class="reference external" href="https://airtest.doc.io.netease.com/IDEdocs/device_connection/2_android_faq/">Android设备连接 Q&amp;A</a></p>
 <ul class="simple">
 <li><p>请先安装手机对应品牌的官方驱动，确保能使用电脑对手机进行USB调试</p></li>
 <li><p>确保已经打开了手机中的”开发者选项”，并且打开”开发者选项”内的”允许USB调试”</p></li>
 <li><p>部分手机需要打开”允许模拟位置”、”允许通过USB安装应用”</p></li>
 <li><p>关闭电脑上已经安装的手机助手软件，能避免绝大多数问题，请务必在任务管理器中手工结束手机助手进程</p></li>
 </ul>
-<p>[iOS设备连接 Q&amp;A](<a class="reference external" href="https://airtest.doc.io.netease.com/IDEdocs/device_connection/4_ios_connection/">https://airtest.doc.io.netease.com/IDEdocs/device_connection/4_ios_connection/</a>)
-- 请先准备一台macOS ，使用xcode部署 iOS-Tagent 成功后，能够在mac或windows机器上连接到iOS手机。请点击[链接](<a class="reference external" href="https://github.com/AirtestProject/IOS-Tagent">https://github.com/AirtestProject/IOS-Tagent</a>)下载项目代码到本地进行部署。
-- mac 环境通过 Homebrew 安装iproxy <cite>brew install libimobiledevice</cite>
-- windows 环境安装[itunes](<a class="reference external" href="https://support.apple.com/downloads/itunes">https://support.apple.com/downloads/itunes</a>)</p>
+<p><a class="reference external" href="https://airtest.doc.io.netease.com/IDEdocs/device_connection/4_ios_connection/">iOS设备连接 Q&amp;A</a></p>
+<ul class="simple">
+<li><p>请先准备一台macOS ，使用xcode部署 iOS-Tagent 成功后，能够在mac或windows机器上连接到iOS手机。请点击<a class="reference external" href="https://github.com/AirtestProject/IOS-Tagent">链接</a>下载项目代码到本地进行部署。</p></li>
+<li><p>mac 环境通过 Homebrew 安装iproxy <code class="docutils literal notranslate"><span class="pre">brew</span> <span class="pre">install</span> <span class="pre">libimobiledevice</span></code></p></li>
+<li><p>windows 环境安装<a class="reference external" href="https://support.apple.com/downloads/itunes">itunes</a></p></li>
+</ul>
 </li>
-<li><dl>
-<dt>下载安装测试包</dt><dd><ul>
-<li><p>Android：框架会通过`config`中配置的`packagePath`自动下载测试包并安装（请确保手机已经打开”允许安装未知来源“ ）。也可手动下载安装：[下载地址](<a class="reference external" href="https://download2.ctrip.com/html5/Ctrip_V8.43.0_SIT4-100053_Product_9725895.apk">https://download2.ctrip.com/html5/Ctrip_V8.43.0_SIT4-100053_Product_9725895.apk</a>)</p></li>
-<li><dl>
-<dt>iOS:</dt><dd><ol class="arabic simple">
-<li><p>请手动下载演示APP进行安装：[下载地址](<a class="reference external" href="https://download2.ctrip.com/html5/Ctrip_V8.43.0_SIT4-092310_Product_9725506.ipa">https://download2.ctrip.com/html5/Ctrip_V8.43.0_SIT4-092310_Product_9725506.ipa</a>)</p></li>
+<li><p>下载安装测试包</p>
+<ul class="simple">
+<li><p>Android：框架会通过<code class="docutils literal notranslate"><span class="pre">config</span></code>中配置的<code class="docutils literal notranslate"><span class="pre">packagePath</span></code>自动下载测试包并安装（请确保手机已经打开”允许安装未知来源“ ）。也可手动下载安装：<a class="reference external" href="https://download2.ctrip.com/html5/Ctrip_V8.43.0_SIT4-100053_Product_9725895.apk">下载地址</a></p></li>
+<li><p>iOS:</p>
+<ol class="arabic simple">
+<li><p>请手动下载演示APP进行安装：<a class="reference external" href="https://download2.ctrip.com/html5/Ctrip_V8.43.0_SIT4-092310_Product_9725506.ipa">下载地址</a></p></li>
+<li><p>开启wdaproxy： <code class="docutils literal notranslate"><span class="pre">shell</span> <span class="pre">tidevice</span> <span class="pre">--udid</span>&#160; <span class="pre">$udid</span> <span class="pre">wdaproxy</span> <span class="pre">-B</span> <span class="pre">$web_driver_angnt_bundle_id</span> <span class="pre">-p</span> <span class="pre">$port</span></code></p></li>
 </ol>
-<p>2. 开启wdaproxy： <code class="docutils literal notranslate"><span class="pre">`shell</span> <span class="pre">tidevice</span> <span class="pre">--udid</span>
-<span class="pre">$udid</span> <span class="pre">wdaproxy</span> <span class="pre">-B</span> <span class="pre">$web_driver_angnt_bundle_id</span> <span class="pre">-p</span> <span class="pre">$port`</span></code></p>
-</dd>
-</dl>
 </li>
 </ul>
-</dd>
-</dl>
 </li>
 </ol>
-<p>## 运行参数</p>
-<p>在终端输入以下内容来查看**flybirds**运行项目时支持的操作
-<code class="docutils literal notranslate"><span class="pre">`bash</span>
-<span class="pre">flybirds</span> <span class="pre">run</span> <span class="pre">--help</span>
-<span class="pre">`</span></code>
-- <strong>run</strong></p>
-<blockquote>
-<div><p>执行features目录下所有的feature文件</p>
-</div></blockquote>
+</section>
+<section id="id9">
+<h2>运行参数<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h2>
+<p>在终端输入以下内容来查看<strong>flybirds</strong>运行项目时支持的操作</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>flybirds run --help
+</pre></div>
+</div>
 <ul>
+<li><p><strong>run</strong></p>
+<p>执行features目录下所有的feature文件</p>
+</li>
 <li><p><strong>–path, -P</strong></p>
 <p>指定需要执行的feature集合，可以是目录，也可以指定到具体feature文件，默认是 ‘<strong>features</strong>’ 目录.</p>
 <p>示例:</p>
-<p><code class="docutils literal notranslate"><span class="pre">`bash</span>
-<span class="pre">flybirds</span> <span class="pre">run</span> <span class="pre">-P</span> <span class="pre">./features/test/demo.feature</span>
-<span class="pre">`</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>flybirds run -P ./features/test/demo.feature
+</pre></div>
+</div>
 </li>
 <li><p><strong>–tag, -T</strong></p>
-<p>运行有特定tag的场景，多个用逗号隔开，‘-’开头表示不运行包含此tag的场景
-<code class="docutils literal notranslate"><span class="pre">`bash</span>
-<span class="pre">flybirds</span> <span class="pre">run</span> <span class="pre">-T</span> <span class="pre">tag1,tag2,-tag3,tag4</span>
-<span class="pre">`</span></code></p>
+<p>运行有特定tag的场景，多个用逗号隔开，‘-’开头表示不运行包含此tag的场景</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>flybirds run -T tag1,tag2,-tag3,tag4
+</pre></div>
+</div>
 </li>
 <li><p><strong>–format, -F</strong></p>
 <p>指定生成测试结果的格式，默认是 json.</p>
 <p>示例:</p>
-<p><code class="docutils literal notranslate"><span class="pre">`bash</span>
-<span class="pre">#默认</span>
-<span class="pre">flybirds</span> <span class="pre">run</span> <span class="pre">--format=json</span>
-<span class="pre">`</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#默认</span>
+flybirds run --format<span class="o">=</span>json
+</pre></div>
+</div>
 </li>
 </ul>
-<p>## 配置参数
-<strong>提供了丰富的配置项 ｜ [帮助文档](https://github.com/ctripcorp/flybirds/blob/main/docs/demoproject_zhCN.md)</strong></p>
+</section>
+<section id="id10">
+<h2>配置参数<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h2>
+<p><strong>提供了丰富的配置项 ｜ <a class="reference external" href="https://github.com/ctripcorp/flybirds/blob/main/docs/demoproject_zhCN.md">帮助文档</a></strong></p>
 <p>必须配置项：deviceId packageName。</p>
 <p>连接IOS设备时，需要额外配置webDriverAgent、platform。</p>
-<p>![configimg](images/confignew.png)</p>
-<p>## 报告(report)
-&gt; 报告包含汇总Summary和功能(feature)、场景(senario)的执行结果，对于失败的场景(senario)，报告中会展示当时的屏幕图像和视频, 下面是一个例子。
-![report](images/report.png)</p>
-<p>## 自定义step语句模板</p>
+<p><img alt="configimg" src="images/confignew.png" /></p>
+</section>
+<section id="report">
+<h2>报告(report)<a class="headerlink" href="#report" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><p>报告包含汇总Summary和功能(feature)、场景(senario)的执行结果，对于失败的场景(senario)，报告中会展示当时的屏幕图像和视频, 下面是一个例子。
+<img alt="report" src="images/report.png" /></p>
+</div></blockquote>
+</section>
+<section id="id11">
+<h2>自定义step语句模板<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h2>
 <p>在编写Feature的过程中，可能会遇到提供的公共语句不能满足自身项目的需求，需要自定义语句。比如：需要对接某个内部工具API，此时需要用到自定义语句功能。</p>
 <p>自定义语句功能会用到python，如果你不了解这门编程语言，也不必要太担心，因为只会使用到最基础的python语法，这并不会太难。</p>
-<p><strong>使用方法</strong>
-1. 进入项目目录”psscript/dsl/steps”
-2. 新建.py文件来编写自定义语句
-3. 在feature/steps/steps.py中import该.py文件</p>
+<p><strong>使用方法</strong></p>
+<ol class="arabic simple">
+<li><p>进入项目目录”psscript/dsl/steps”</p></li>
+<li><p>新建.py文件来编写自定义语句</p></li>
+<li><p>在feature/steps/steps.py中import该.py文件</p></li>
+</ol>
 <p>示例代码如下
-![dsl_extend](images/dsl_extend.png)</p>
+<img alt="dsl_extend" src="images/dsl_extend.png" /></p>
 <p>对于团队内部通用的自定义功能，可以考虑创建一个extend package，flybirds支持动态加载，package命名包含“-flybirds-plugin”即可。</p>
-<p>## 自定义框架扩展</p>
+</section>
+<section id="id12">
+<h2>自定义框架扩展<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h2>
 <p>理论上BDD-UI-Testing 可以适用在所有端，比如：APP、Web、小程序。</p>
 <p>框架的插件式设计模式，保留了良好的扩展，当前版本只开放了APP端支持，未来会逐步开放更多，下面是两个例子供大家参考。</p>
-<p><strong>增加web端扩展</strong>
-1. 在`plugins.default`下添加自己的web包
-2. 添加web对应的实现。比如`page.py,element.py`，如果需要增加其他的插件实现类，只需要在`GlobalContext`类中添加对应的名称。
-3. 在`plugin.event`下添加自己的web包。
-4. 在`event.web`包下重写或者新增类，比如重写`run`事件可以在`plugin.event.web`下面添加”run.py”，具体实现逻辑可参照已有的`run.py`。
-5. 在项目配置文件”flybirdes_config.json”配置 <a href="#id3"><span class="problematic" id="id4">`</span></a>device_info.platform`值为”web”。</p>
-<p><strong>修改当前APP端扩展</strong>
-- 可通过配置”plugin_info.json”对已有的plugins进行修改(只支持修改不支持新增)，比如你希望对plugins下面`ios.app`进行修改：</p>
-<blockquote>
-<div><ol class="arabic simple">
-<li><p>可以在本地创建一个自己 app.py</p></li>
+<p><strong>增加web端扩展</strong></p>
+<ol class="arabic simple">
+<li><p>在<code class="docutils literal notranslate"><span class="pre">plugins.default</span></code>下添加自己的web包</p></li>
+<li><p>添加web对应的实现。比如<code class="docutils literal notranslate"><span class="pre">page.py,element.py</span></code>，如果需要增加其他的插件实现类，只需要在<code class="docutils literal notranslate"><span class="pre">GlobalContext</span></code>类中添加对应的名称。</p></li>
+<li><p>在<code class="docutils literal notranslate"><span class="pre">plugin.event</span></code>下添加自己的web包。</p></li>
+<li><p>在<code class="docutils literal notranslate"><span class="pre">event.web</span></code>包下重写或者新增类，比如重写<code class="docutils literal notranslate"><span class="pre">run</span></code>事件可以在<code class="docutils literal notranslate"><span class="pre">plugin.event.web</span></code>下面添加”run.py”，具体实现逻辑可参照已有的<code class="docutils literal notranslate"><span class="pre">run.py</span></code>。</p></li>
+<li><p>在项目配置文件”flybirdes_config.json”配置 <code class="docutils literal notranslate"><span class="pre">device_info.platform</span></code>值为”web”。</p></li>
 </ol>
-<p>2. 在plugin_info.json对应平台中添加如下配置:
-<a href="#id5"><span class="problematic" id="id6">``</span></a><a href="#id7"><span class="problematic" id="id8">`</span></a>json</p>
+<p><strong>修改当前APP端扩展</strong></p>
+<ul>
+<li><p>可通过配置”plugin_info.json”对已有的plugins进行修改(只支持修改不支持新增)，比如你希望对plugins下面<code class="docutils literal notranslate"><span class="pre">ios.app</span></code>进行修改：</p>
+<ol class="arabic simple">
+<li><p>可以在本地创建一个自己 app.py</p></li>
+<li><p>在plugin_info.json对应平台中添加如下配置:</p></li>
+</ol>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>   <span class="nt">&quot;app&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;{local_path}/app.py&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;ns&quot;</span><span class="p">:</span> <span class="s2">&quot;app.plugin&quot;</span>
+    <span class="p">}</span>
+</pre></div>
+</div>
 <blockquote>
-<div><dl>
-<dt>“app”: {</dt><dd><blockquote>
-<div><p>“path”: “{local_path}/app.py”,
-“ns”: “app.plugin”</p>
+<div><p>{local_path} 为本地路径，”ns”为包名,注意包名的唯一性</p>
 </div></blockquote>
-<p>}</p>
-</dd>
-</dl>
-</div></blockquote>
-<p><a href="#id9"><span class="problematic" id="id10">``</span></a>`
-&gt;  {local_path} 为本地路径，”ns”为包名,注意包名的唯一性</p>
-</div></blockquote>
-<p>## 其他语种支持</p>
-<p>flybirds可以支持40几种语言，在以下文件中增加公共方法的语言配置即可。
-<code class="docutils literal notranslate"><span class="pre">`</span>
-<span class="pre">flybirds/core/dsl/globalization/i18n.py</span>
-<span class="pre">`</span></code></p>
-<p>示例代码如下
-![lang](images/lang_extend.png)</p>
-<p>## 持续集成
-cli提供的命令行执行模式，可以非常方便加入各种持续集成工具.</p>
-<p>以Jenkins为例：
-<code class="docutils literal notranslate"><span class="pre">`bash</span>
-<span class="pre">#</span> <span class="pre">Inside</span> <span class="pre">the</span> <span class="pre">jenkins</span> <span class="pre">shell</span> <span class="pre">command</span>
-<span class="pre">cd</span> <span class="pre">{PATH_TO_PROJECT_FOLDER}</span>
-<span class="pre">#</span> <span class="pre">Run</span>
-<span class="pre">flybirds</span> <span class="pre">run</span> <span class="pre">-P</span> <span class="pre">./features/test/everything.feature</span>
-<span class="pre">cp</span> <span class="pre">-R</span> <span class="pre">reports</span> <span class="pre">$WORKSPACE</span>
-<span class="pre">`</span></code></p>
-<p>## 发版计划
-我们将按照 SemVer 版本控制规范进行发版。逐步新增功能和代码优化，非常欢迎您加入到我们的共建计划中，在 Github 上提出您的宝贵建议，以及在使用时遇到的一切问题，我们也会对此每周进行一次小版本的迭代。您也可以在这里给我们精神支持，点上一颗 Star。</p>
-<ul class="simple">
-<li><p>Github地址：<a class="reference external" href="https://github.com/ctripcorp/flybirds">https://github.com/ctripcorp/flybirds</a></p></li>
-<li><p>PyPI地址：<a class="reference external" href="https://pypi.org/project/flybirds">https://pypi.org/project/flybirds</a></p></li>
-<li><p>贡献
-1. Fork 仓库
-2. 创建分支 (<cite>git checkout -b my-new-feature</cite>)
-3. 提交修改 (<cite>git commit -am ‘Add some feature’</cite>)
-4. 推送 (<cite>git push origin my-new-feature</cite>)
-5. 创建 PR</p></li>
-<li><p>欢迎在 github [issues](<a class="reference external" href="https://github.com/ctripcorp/flybirds/issues">https://github.com/ctripcorp/flybirds/issues</a>) 区提问</p></li>
-<li><p>支持邮箱：<a class="reference external" href="mailto:flybirds_support&#37;&#52;&#48;trip&#46;com">flybirds_support<span>&#64;</span>trip<span>&#46;</span>com</a></p></li>
+</li>
 </ul>
+</section>
+<section id="id13">
+<h2>其他语种支持<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h2>
+<p>flybirds可以支持40几种语言，在以下文件中增加公共方法的语言配置即可。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">flybirds</span><span class="o">/</span><span class="n">core</span><span class="o">/</span><span class="n">dsl</span><span class="o">/</span><span class="n">globalization</span><span class="o">/</span><span class="n">i18n</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>示例代码如下
+<img alt="lang" src="images/lang_extend.png" /></p>
+</section>
+<section id="id14">
+<h2>持续集成<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h2>
+<p>cli提供的命令行执行模式，可以非常方便加入各种持续集成工具.</p>
+<p>以Jenkins为例：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Inside the jenkins shell command</span>
+<span class="nb">cd</span> <span class="o">{</span>PATH_TO_PROJECT_FOLDER<span class="o">}</span>
+<span class="c1"># Run</span>
+flybirds run -P ./features/test/everything.feature
+cp -R reports <span class="nv">$WORKSPACE</span>
+</pre></div>
+</div>
+</section>
+<section id="id15">
+<h2>发版计划<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h2>
+<p>我们将按照 SemVer 版本控制规范进行发版。逐步新增功能和代码优化，非常欢迎您加入到我们的共建计划中，在 Github 上提出您的宝贵建议，以及在使用时遇到的一切问题，我们也会对此每周进行一次小版本的迭代。您也可以在这里给我们精神支持，点上一颗 Star。</p>
+<ul class="simple">
+<li><p>Github地址：https://github.com/ctripcorp/flybirds</p></li>
+<li><p>PyPI地址：https://pypi.org/project/flybirds</p></li>
+<li><p>贡献</p>
+<ol class="arabic simple">
+<li><p>Fork 仓库</p></li>
+<li><p>创建分支 (<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span> <span class="pre">-b</span> <span class="pre">my-new-feature</span></code>)</p></li>
+<li><p>提交修改 (<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span> <span class="pre">-am</span> <span class="pre">'Add</span> <span class="pre">some</span> <span class="pre">feature'</span></code>)</p></li>
+<li><p>推送 (<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">origin</span> <span class="pre">my-new-feature</span></code>)</p></li>
+<li><p>创建 PR</p></li>
+</ol>
+</li>
+<li><p>欢迎在 github <a class="reference external" href="https://github.com/ctripcorp/flybirds/issues">issues</a> 区提问</p></li>
+<li><p>支持邮箱：flybirds_support&#64;trip.com</p></li>
+</ul>
+</section>
+</section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="hello.html" class="btn btn-neutral float-left" title="hello,world" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="hellomd.html" class="btn btn-neutral float-left" title="hello world" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
